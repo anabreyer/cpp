@@ -7,7 +7,7 @@ SRC			=	main.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 
-COMPILE		=	clang++
+COMPILE		=	c++
 
 # -std=c++98 displays an error if an unauthorized function is left in the code
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
