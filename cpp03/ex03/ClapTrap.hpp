@@ -1,5 +1,5 @@
-#ifndef CLAPTRA_HPP
-# define CLAPTRA_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <string>
 # include <iostream>
@@ -14,7 +14,7 @@ class ClapTrap
     public:
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap& clap);
-        ~ClapTrap();
+        virtual ~ClapTrap();
         ClapTrap& operator = (const ClapTrap& clap);
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);

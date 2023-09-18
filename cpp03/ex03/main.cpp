@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 void fight(ClapTrap &attacker, ClapTrap &target)
 {
@@ -10,23 +11,13 @@ void fight(ClapTrap &attacker, ClapTrap &target)
 
 int main()
 {
-    ClapTrap    aisha("aisha");
-    ClapTrap    amanda("amanda");
-    ScavTrap    jisu("jisu");
-    FragTrap    ana("ana");
+    	DiamondTrap	hello("hello");
 
-    fight(aisha, amanda);
-    fight(aisha, amanda);
-    for (int i = 0; i < 10; i++)
-        aisha.beRepaired(1);
-    for (int i = 0; i < 10; i++)
-    {
-        aisha.takeDamage(2);
-        amanda.takeDamage(2);
-    }
-    jisu.guardGate();
-    jisu.attack("hello");
-    ana.highFivesGuys();
-    ana.attack("jisu");
-    return (0);
+	for (int i = 0; i < 10; i++)
+		hello.beRepaired(1);
+	hello.attack("hey");
+	for (int i = 0; i < 11; i++)
+		hello.takeDamage(10);
+	hello.attack("heyy");
+	return 0;
 }
