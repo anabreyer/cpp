@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 13:21:47 by codespace         #+#    #+#             */
-/*   Updated: 2023/04/24 21:49:14 by codespace        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
@@ -24,7 +13,7 @@ const char*	GradeTooLowException::what() const throw()
 
 Bureaucrat::Bureaucrat()
 {
-	std::cout << "Bureaucrat Default Constrctor\n";
+	std::cout << "Bureaucrat Default Constructor\n";
 }
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)

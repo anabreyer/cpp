@@ -3,27 +3,27 @@
 #include <iostream>
 #include <exception>
 
-class Bureaucrat::GradeTooHighException : public std::exception
+class GradeTooHighException : public std::exception
 {
-    public:
+	public:
 		virtual const char* what() const throw();
 };
 
-class  Bureaucrat::GradeTooLowException : public std::exception
+class GradeTooLowException : public std::exception
 {
-    public:
+	public:
 		virtual const char* what() const throw();
 };
 
 class Bureaucrat 
 {
     private:
-        const std::string name;
-        int grade;
-        static const int max_grade = 150;
-        static const int min_grade = 1;
-        GradeTooHighException tooHigh;
-        GradeTooLowException tooLow;
+        std::string const       name;
+        int                     grade;
+        static const int        max_grade = 1;
+        static const int        min_grade = 150;
+		GradeTooHighException	tooHigh;
+		GradeTooLowException	tooLow;
     public:
         Bureaucrat();
         Bureaucrat(std::string name, int grade);

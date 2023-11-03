@@ -1,15 +1,5 @@
 #include "Bureaucrat.hpp"
 
-const char*	GradeTooHighException::what() const throw()
-{
-	return ("Grade Too High");
-}
-
-const char*	GradeTooLowException::what() const throw()
-{
-	return ("Grade Too Low");
-}
-
 Bureaucrat::Bureaucrat()
 {
     std::cout << "[Bureaucrat] default constructor called" << ::std::endl;
@@ -77,4 +67,19 @@ void	Bureaucrat::downgrade(void)
 	if (this->grade + 1 > this->min_grade)
 		throw tooLow;
 	this->grade += 1;
+}
+
+void	Bureaucrat::signForm(Form& form) const
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->name << " signed " << form.getName() << "\n";
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->name << " couldn't sign " << form.getName() \
+				  << " because " << e.what() << '\n';
+	}
+	
 }
