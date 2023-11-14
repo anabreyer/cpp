@@ -20,4 +20,10 @@ class FormNotSigned : public std::exception
 		virtual const char* what() const throw();
 };
 
+class InexistantForm : public std::exception
+{
+	public:
+		virtual const char* what() const throw();
+};
+
 #endif

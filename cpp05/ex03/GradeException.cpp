@@ -14,3 +14,8 @@ const char*	FormNotSigned::what() const throw()
 {
 	return ("Form Not Signed");
 }
+
+const char*	InexistantForm::what() const throw()
+{
+	return ("Form Does Not Exist");
+}
